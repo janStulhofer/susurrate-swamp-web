@@ -1,0 +1,15 @@
+.pozadi{
+    background: url(pixelshardaaaa.png); 
+    animation:pozadii 1ms infinite;    
+    position: fixed;
+    z-index: -1;
+    width: 200%;
+    height: 200%;
+    top:0;
+    left: 0;
+}
+
+@keyframes pozadii{
+    from{filter: brightness(100%);}
+    to{filter: brightness(120%);}
+}
