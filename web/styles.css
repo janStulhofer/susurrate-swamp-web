@@ -1,5 +1,5 @@
 .pozadi{
-    background: url(pixelshardaaaa.png); 
+    background: url(/web/imgs/pixelshardaaaa.png); 
     animation:pozadii 1ms infinite;    
     position: fixed;
     z-index: -1;
