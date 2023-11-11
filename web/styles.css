@@ -1,15 +1,83 @@
-.pozadi{
-    background: url(/web/imgs/pixelshardaaaa.png); 
-    animation:pozadii 1ms infinite;    
+body html {
+    height: 100%;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 0px;
+
+
+
+}
+
+li {
+    margin: 5px;
+}
+
+.titleBar {
+    width: 1400px;
+    height: 30px;
+    position: absolute;
+    background-color: #4d4f4f;
+    border: 1px solid #575a5a;
+    left: 50%;
+    margin-left: -700px;
+    border-radius: 10px 10px 0 0;
+}
+
+#ikony {
+    color: white;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 7px;
+    letter-spacing: 5px;
+}
+
+.bgTtp {
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 1920px;
+    height: 350px;
+
+    z-index: 0;
+    position: fixed;
+}
+
+.pozadi {
+    background: url(/web/imgs/pixelshardaaaa.png);
+    animation: pozadii 1ms infinite;
     position: fixed;
     z-index: -1;
     width: 200%;
     height: 200%;
-    top:0;
+    top: 0;
     left: 0;
 }
 
-@keyframes pozadii{
-    from{filter: brightness(100%);}
-    to{filter: brightness(120%);}
+#center {
+    text-align: center;
+    align-content: center;
+}
+
+#logo {
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+@keyframes pozadii {
+    from {
+        filter: brightness(100%);
+    }
+
+    to {
+        filter: brightness(120%);
+    }
+}
+
+@font-face {
+    font-family: fontLogo;
+    src: url(/web/fonts/valium.regular.ttf);
 }
