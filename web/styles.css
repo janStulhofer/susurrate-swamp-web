@@ -3,49 +3,6 @@ body html {
     margin: 0;
 }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 0px;
-
-
-
-}
-
-li {
-    margin: 5px;
-}
-
-.titleBar {
-    width: 1400px;
-    height: 30px;
-    position: absolute;
-    background-color: #4d4f4f;
-    border: 1px solid #575a5a;
-    left: 50%;
-    margin-left: -700px;
-    border-radius: 10px 10px 0 0;
-}
-
-#ikony {
-    color: white;
-    text-align: right;
-    padding-right: 20px;
-    padding-top: 7px;
-    letter-spacing: 5px;
-}
-
-.bgTtp {
-    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
-    width: 1920px;
-    height: 350px;
-
-    z-index: 0;
-    position: fixed;
-}
-
 .pozadi {
     background: url(/web/imgs/pixelshardaaaa.png);
     animation: pozadii 1ms infinite;
@@ -57,14 +14,93 @@ li {
     left: 0;
 }
 
+.bgTtp {
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 1920px;
+    height: 550px;
+    z-index: 0;
+    position: fixed;
+}
+
+/*ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 0px;
+}*/
+
+/*li {
+    margin: 5px;
+}*/
+
+.titleBar {
+    width: 1400px;
+    height: 30px;
+    position: absolute;
+    background-color: #4d4f4f;
+    border: 1px solid #575a5a;
+    left: 50%;
+    margin-left: -700px;
+    border-radius: 10px 10px 0 0;
+    z-index: 100;
+}
+
+#nadpis{
+    color: white;
+    padding-top: 4px;
+    padding-left: 700px;
+    position: absolute;
+    overflow: hidden;
+    animation: horizontal-shaking 5s infinite;
+    text-shadow: 0.25px 0.25px 1px #ff0000;
+    animation: text-shadow-shaking 0.5s infinite;
+
+}
+
+#ikony {
+    color: white;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 5px;
+    letter-spacing: 5px;
+}
+
 #center {
     text-align: center;
     align-content: center;
+    font-family: 'Courier Prime', monospace;
 }
 
 #logo {
     padding: 20px;
     padding-bottom: 40px;
+}
+
+#lolx {
+    
+    padding: 10px;
+    padding-top: 30px;
+}
+
+#mute{
+    position: fixed; 
+    left: 15px; 
+    bottom: 20px; 
+    cursor: pointer;
+}
+
+.obsah{
+    width: 1400px; /* můžete nastavit šířku podle potřeby */
+    height: 730px;
+    position: absolute;
+    top: 155px; /* výška titleBar + mezera mezi titleBar a obsahem */
+    left: 50%;
+    margin-left: -700px; /* polovina šířky obsahu */
+    background-color:rgba(77, 79, 79, 0.4); /* barva pozadí pro obsah */
+    border: 1px solid #575a5a; /* ohraničení obsahu */
+    border-radius: 0 0 10px 10px; /* zaoblení rohů */
+    z-index: 99;
 }
 
 @keyframes pozadii {
@@ -81,3 +117,29 @@ li {
     font-family: fontLogo;
     src: url(/web/fonts/valium.regular.ttf);
 }
+
+@keyframes horizontal-shaking {
+    0%, 20%, 40%, 60%, 80% { transform: translateX(0); }
+    10% { transform: translateX(1px); }
+    30% { transform: translateX(-1px); }
+    50% { transform: translateX(1px); }
+    70% { transform: translateX(-1px); }
+    90% { transform: translateX(1px); }
+    100% { transform: translateX(0); }
+  }
+
+  @keyframes text-shadow-shaking {
+    0%, 20%, 40%, 60%, 80% {
+      text-shadow: 0 0 0 transparent; /* žádný stín */
+    }
+    10% {
+      text-shadow: 2px 0 1px red; /* pozitivní pohyb stínu */
+    }
+    30%, 50%, 70%, 90% {
+      text-shadow: -3px 0 1px rgb(0, 145, 255); /* negativní pohyb stínu */
+    }
+    100% {
+      text-shadow: 0 0 0 transparent; /* žádný stín na konci */
+    }
+  }
+  
