@@ -22,17 +22,38 @@ body html {
     position: fixed;
 }
 
-/*ul {
+ul {
     list-style-type: none;
     display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 0px;
-}*/
+    justify-content: right;
+    position: absolute;
+    margin-top: -2px;
+    text-align: right;
+    padding-left: 1093px;
+}
 
-/*li {
+a {
+    text-underline-offset: 1px;
+    color: #B1A8B9;
+}
+
+li {
+    padding-top: 10px;
     margin: 5px;
-}*/
+    color: aliceblue;
+    text-align: right;
+    justify-content: right;
+}
+
+#navBar {
+    width: 1400px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 
 .titleBar {
     width: 1400px;
@@ -44,12 +65,14 @@ body html {
     margin-left: -700px;
     border-radius: 10px 10px 0 0;
     z-index: 100;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.5);
+
 }
 
-#nadpis{
+#nadpis {
     color: white;
     padding-top: 4px;
-    padding-left: 700px;
+    padding-left: 48%;
     position: absolute;
     overflow: hidden;
     animation: horizontal-shaking 5s infinite;
@@ -78,29 +101,34 @@ body html {
 }
 
 #lolx {
-    
+
     padding: 10px;
-    padding-top: 30px;
+    padding-top: 65px;
 }
 
-#mute{
-    position: fixed; 
-    left: 15px; 
-    bottom: 20px; 
-    cursor: pointer;
+#mute {
+    position: fixed;
+    left: 15px;
+    bottom: 20px;
+    cursor: not-allowed;
 }
 
-.obsah{
-    width: 1400px; /* můžete nastavit šířku podle potřeby */
+#mute:hover {
+    animation: jump-shaking 1s infinite;
+}
+
+.obsah {
+    width: 1400px;
     height: 730px;
     position: absolute;
-    top: 155px; /* výška titleBar + mezera mezi titleBar a obsahem */
+    top: 155px;
     left: 50%;
-    margin-left: -700px; /* polovina šířky obsahu */
-    background-color:rgba(77, 79, 79, 0.4); /* barva pozadí pro obsah */
-    border: 1px solid #575a5a; /* ohraničení obsahu */
-    border-radius: 0 0 10px 10px; /* zaoblení rohů */
+    margin-left: -700px;
+    background-color: rgba(77, 79, 79, 0.4);
+    border: 1px solid #575a5a;
+    border-radius: 0 0 10px 10px;
     z-index: 99;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes pozadii {
@@ -119,27 +147,96 @@ body html {
 }
 
 @keyframes horizontal-shaking {
-    0%, 20%, 40%, 60%, 80% { transform: translateX(0); }
-    10% { transform: translateX(1px); }
-    30% { transform: translateX(-1px); }
-    50% { transform: translateX(1px); }
-    70% { transform: translateX(-1px); }
-    90% { transform: translateX(1px); }
-    100% { transform: translateX(0); }
-  }
 
-  @keyframes text-shadow-shaking {
-    0%, 20%, 40%, 60%, 80% {
-      text-shadow: 0 0 0 transparent; /* žádný stín */
+    0%,
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(0);
     }
+
     10% {
-      text-shadow: 2px 0 1px red; /* pozitivní pohyb stínu */
+        transform: translateX(1px);
     }
-    30%, 50%, 70%, 90% {
-      text-shadow: -3px 0 1px rgb(0, 145, 255); /* negativní pohyb stínu */
+
+    30% {
+        transform: translateX(-1px);
     }
+
+    50% {
+        transform: translateX(1px);
+    }
+
+    70% {
+        transform: translateX(-1px);
+    }
+
+    90% {
+        transform: translateX(1px);
+    }
+
     100% {
-      text-shadow: 0 0 0 transparent; /* žádný stín na konci */
+        transform: translateX(0);
     }
-  }
-  
+}
+
+@keyframes text-shadow-shaking {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80% {
+        text-shadow: 0 0 0 transparent;
+        /* žádný stín */
+    }
+
+    10% {
+        text-shadow: 2px 0 1px red;
+        /* pozitivní pohyb stínu */
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        text-shadow: -3px 0 1px rgb(0, 145, 255);
+        /* negativní pohyb stínu */
+    }
+
+    100% {
+        text-shadow: 0 0 0 transparent;
+        /* žádný stín na konci */
+    }
+}
+
+@keyframes jump-shaking {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateY(-9px)
+    }
+
+    35% {
+        transform: translateY(-9px) rotate(17deg)
+    }
+
+    55% {
+        transform: translateY(-9px) rotate(-17deg)
+    }
+
+    65% {
+        transform: translateY(-9px) rotate(17deg)
+    }
+
+    75% {
+        transform: translateY(-9px) rotate(-17deg)
+    }
+
+    100% {
+        transform: translateY(0) rotate(0)
+    }
+}
