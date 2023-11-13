@@ -1,6 +1,14 @@
 body html {
     height: 100%;
     margin: 0;
+
+}
+
+html {
+    animation-duration: 0.21s;
+    animation-name: textflicker;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .pozadi {
@@ -12,6 +20,13 @@ body html {
     height: 200%;
     top: 0;
     left: 0;
+}
+
+#crtEfekt {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 25%;
 }
 
 .bgTtp {
@@ -43,6 +58,7 @@ li {
     color: aliceblue;
     text-align: right;
     justify-content: right;
+    display: flex;
 }
 
 #navBar {
@@ -75,9 +91,7 @@ li {
     padding-left: 48%;
     position: absolute;
     overflow: hidden;
-    animation: horizontal-shaking 5s infinite;
-    text-shadow: 0.25px 0.25px 1px #ff0000;
-    animation: text-shadow-shaking 0.5s infinite;
+
 
 }
 
@@ -103,7 +117,14 @@ li {
 #lolx {
 
     padding: 10px;
-    padding-top: 65px;
+    padding-top: 75px;
+
+}
+
+footer {
+    top: 767px;
+    overflow: hidden;
+    position: relative;
 }
 
 #mute {
@@ -113,8 +134,24 @@ li {
     cursor: not-allowed;
 }
 
+li:hover {
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
 #mute:hover {
     animation: jump-shaking 1s infinite;
+}
+
+#socky {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 0px;
+    padding-left: 0;
+}
+
+#igIco {
+    padding-right: 5px;
 }
 
 .obsah {
@@ -137,7 +174,7 @@ li {
     }
 
     to {
-        filter: brightness(120%);
+        filter: brightness(115%);
     }
 }
 
@@ -181,36 +218,6 @@ li {
     }
 }
 
-@keyframes text-shadow-shaking {
-
-    0%,
-    20%,
-    40%,
-    60%,
-    80% {
-        text-shadow: 0 0 0 transparent;
-        /* žádný stín */
-    }
-
-    10% {
-        text-shadow: 2px 0 1px red;
-        /* pozitivní pohyb stínu */
-    }
-
-    30%,
-    50%,
-    70%,
-    90% {
-        text-shadow: -3px 0 1px rgb(0, 145, 255);
-        /* negativní pohyb stínu */
-    }
-
-    100% {
-        text-shadow: 0 0 0 transparent;
-        /* žádný stín na konci */
-    }
-}
-
 @keyframes jump-shaking {
     0% {
         transform: translateX(0)
@@ -238,5 +245,15 @@ li {
 
     100% {
         transform: translateY(0) rotate(0)
+    }
+}
+
+@keyframes textflicker {
+    from {
+        text-shadow: 1.25px 0 0 #ea36af, -1px 0 0 #75fa69;
+    }
+
+    to {
+        text-shadow: 1.25px 0.25px 1px #ea36af, -0.75px -0.25px 1px #75fa69;
     }
 }
