@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<html lang="en-cs">
 
 <head>
     <title>Susurrate Swamp</title>
     <meta charset="UTF-8">
     <link href="/web/styles.css" rel="stylesheet" type="text/css">
     <link href="/web/imgs/favicon.ico" rel="shortcut icon" type="image/ico">
+    <meta charset="UTF-8">
     <script src="/web/scripts.js" defer></script>
     <script>function testtt() {
             document.addEventListener('DOMContentLoaded', function () {
@@ -18,10 +20,10 @@
 
                         if (audioElement.volume === 0) {
                             audioElement.volume = 1;
-                            muteButton.src = 'tfX.png.png'; //menit
+                            muteButton.src = 'tfX.png'; //menit
                         } else {
                             audioElement.volume = 0;
-                            muteButton.src = 'tfX.png.png'; //menit
+                            muteButton.src = 'tfX.png'; //menit
                         }
                     } catch (error) {
                         console.error('Chyba při ovládání zvuku:', error);
@@ -45,7 +47,7 @@
 
         <div class="titleBar">
             <div id="nadpis">i̸n̵f̴o̷r̷m̵a̷c̸e̵.̵h̵t̶m̷l̷</div>
-            <div id="ikony">— ☐ X</div>
+            <div id="ikony" onclick="tBarAlert()">— ☐ X</div>
         </div>
         <div class="obsah">
             <nav id="navBar">
@@ -56,27 +58,22 @@
                 </ul>
             </nav>
             <div style="color: #B1A8B9;" id="lolx">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non faucibus enim. Pellentesque pharetra
-                mi
-                felis, ac sodales nisl fermentum vel. Integer ultricies fermentum libero, a ultrices lorem mollis ut.
-                Sed
-                augue nibh, cursus id commodo at, elementum vel felis. Etiam rhoncus et nunc sed tempor. Phasellus
-                dictum
-                convallis auctor. Donec laoreet, libero rhoncus dapibus maximus, tortor nisl dapibus tortor, in placerat
-                ligula sapien non libero. Duis luctus dictum dui, id molestie neque ultricies id. Duis a diam mollis leo
-                scelerisque aliquam id id metus.
+                Chladný večer...
+                <br>
+                Konečně se vracíš domů. Domov.
+                <br>
+                ...
+                <br>
+                To místo po kterém se ti tak stýská,
+                <br>
+                ještě pár hodin cesty.
+                <br><br>
+                Proč si teda nevychutnáš tu krásnou mrazivou krajinu?
+                <br>
+                Jedinečný relaxační zážitek pro nenáročné hráče (:
+                <br>
+                <br>
 
-                Ut dignissim dui ac lorem vestibulum vulputate. Vivamus aliquet, quam eu euismod suscipit, ex sem cursus
-                ligula, in volutpat massa lacus nec mi. Aliquam a enim laoreet, condimentum nisi non, pharetra libero.
-                Sed
-                hendrerit, odio eu mollis dignissim, lacus nunc lacinia ex, eget molestie orci nunc eget nunc. Sed
-                vulputate
-                nunc odio, vel imperdiet metus convallis ut. Vestibulum ante ipsum primis in faucibus orci luctus et
-                ultrices posuere cubilia curae; Curabitur magna urna, euismod a pharetra non, iaculis et massa. Aliquam
-                ac
-                pellentesque erat. Sed lobortis, ipsum ac mattis convallis, nisi eros placerat augue, sed feugiat augue
-                augue sit amet neque. Phasellus tempor ante risus, non ullamcorper felis facilisis et. Vivamus congue
-                rhoncus accumsan.
             </div>
         </div>
 
@@ -101,3 +98,5 @@
 
     <iframe src="/web/audio/Perpetuus_dolor_lim.mp3" allow="autoplay" style="display:none" id="bgAudioTrack"></iframe>
 </body>
+
+</html>
